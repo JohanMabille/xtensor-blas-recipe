@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "aa371e091b1cf3819c00f2495dfa76e0ee509d25b56513aaed4bd2f0d14a6fe6" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "b7abc18f8e36b4c8bc9af7e1cc234a4aa4c3099195fb905ea5611c9f86806eca" %}
 {% set variant = "openblas" %}
 
 package:
@@ -30,7 +30,7 @@ requirements:
     - xtensor >=0.15.0,<0.16.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
-    
+
 test:
   commands:
     - test -f ${PREFIX}/include/xtensor-blas/xblas.hpp  # [unix]
