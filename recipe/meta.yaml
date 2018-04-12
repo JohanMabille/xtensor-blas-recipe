@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Skipping windows build since openblas is not available on windows
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
   features:                     # [not win]
@@ -26,10 +26,12 @@ requirements:
     - xtensor >=0.15.0,<0.16.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
+    - lapack >=3.6.1            # [not win]
   run:
     - xtensor >=0.15.0,<0.16.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
+    - lapack >=3.6.1            # [not win]
 
 test:
   commands:
