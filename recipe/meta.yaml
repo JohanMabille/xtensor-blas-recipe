@@ -26,10 +26,12 @@ requirements:
     - xtensor >=0.15.0,<0.16.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
+    - lapack >=3.6.1            # [not win]
   run:
     - xtensor >=0.15.0,<0.16.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
+    - lapack >=3.6.1            # [not win]
 
 test:
   commands:
